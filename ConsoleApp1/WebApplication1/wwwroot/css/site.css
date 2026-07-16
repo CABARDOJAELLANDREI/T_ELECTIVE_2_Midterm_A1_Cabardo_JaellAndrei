@@ -1,5 +1,117 @@
+To achieve this updated look, we need to make three adjustments:
+
+Revert the sidebar's background color back to the dark slate gray (#212529 / .bg-dark variant) as it was originally.
+
+Update the sidebar text styles to match the dark color theme.
+
+Add a circular profile picture right above the "Welcome to my Space" badge and main heading in your Index.cshtml home section.
+
+Here is the updated code for those files:
+
+1. Views/Shared/_Layout.cshtml
+This version reverts the sidebar's class styling to use a clean dark background (bg-dark) while maintaining the structure.
+
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - Personal Portfolio</title>
+    <!-- Bootstrap Icons for navigation design -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApplication1.styles.css" asp-append-version="true" />
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Responsive Dark Sidebar Navigation -->
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse bg-dark">
+            <div class="position-sticky pt-3 d-flex flex-column justify-content-between h-100">
+                <div>
+                    <!-- Profile Photo, Name & Title in Sidebar -->
+                    <div class="text-center px-3 mb-4 text-white border-bottom border-secondary pb-3">
+                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=200&auto=format&fit=crop" 
+                             alt="Jaell Andrei Cabardo" 
+                             class="img-fluid rounded-circle shadow mb-3 mt-2 border border-4 border-secondary" 
+                             style="width: 110px; height: 110px; object-fit: cover;" />
+                        
+                        <h5 class="fw-bold mb-1 fs-5">Jaell Andrei Cabardo</h5>
+                        <small class="text-muted d-block fs-7">Aspiring Software Developer</small>
+                    </div>
+                    
+                    <!-- Navigation Menu -->
+                    <ul class="nav flex-column px-2">
+                        <li class="nav-item mb-2">
+                            <a class="nav-link text-white active" href="#home">
+                                <i class="bi bi-house-door me-2"></i> Home
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link text-white-50" href="#about">
+                                <i class="bi bi-person me-2"></i> About Me
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link text-white-50" href="#skills">
+                                <i class="bi bi-code-slash me-2"></i> Skills
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link text-white-50" href="#projects">
+                                <i class="bi bi-laptop me-2"></i> Projects
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link text-white-50" href="#contact">
+                                <i class="bi bi-envelope me-2"></i> Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Sidebar Footer -->
+                <div class="p-3 text-muted text-center border-top border-secondary">
+                    <small>© 2026 - Portfolio</small>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Header Bar (Only visible on Mobile/Tablets) -->
+        <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow d-md-none">
+            <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#home">My Portfolio</a>
+            <button class="navbar-toggler position-absolute d-md-none collapsed m-2" type="button" 
+                    data-bs-toggle="collapse" data-bs-target="#sidebarMenu" 
+                    aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 main-content">
+            <div class="container py-4">
+                @RenderBody()
+            </div>
+        </main>
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+2. wwwroot/css/site.css
+This cleans up the CSS styles, removing the teal override so it falls back nicely to the dark theme styling.
+
+CSS
 html {
   font-size: 14px;
+  scroll-behavior: smooth;
 }
 
 @media (min-width: 768px) {
@@ -8,24 +120,61 @@ html {
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
-  margin-bottom: 60px;
+  background-color: #f8f9fa;
+  color: #333;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+/* Sidebar Custom Theme (Reverted to Dark) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .2);
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+@media (max-width: 767.98px) {
+  .sidebar {
+    position: static;
+    height: auto;
+    width: 100%;
+  }
+  .main-content {
+    margin-top: 20px;
+  }
+}
+
+/* Navigation Links Style Inside Dark Sidebar */
+.sidebar .nav-link {
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.sidebar .nav-link:hover {
+  color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.sidebar .nav-link.active {
+  color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Utility Helper for Smaller Text */
+.fs-7 {
+  font-size: 0.85rem;
+}
+
+/* Portfolio Section Layouts */
+section {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+section:last-of-type {
+  border-bottom: none;
 }

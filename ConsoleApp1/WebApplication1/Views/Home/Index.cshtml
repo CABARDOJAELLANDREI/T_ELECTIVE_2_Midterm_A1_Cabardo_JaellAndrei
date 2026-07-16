@@ -1,8 +1,451 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+
+    ViewData["Title"] = "My Portfolio";
+
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+
+<!-- HOME SECTION -->
+        <section id="home" class="d-flex align-items-center justify-content-center text-center min-vh-100 pt-3">
+    <div class="container">
+        <!-- New Circular Image above Name and Badge (Slightly adjusted top margin) -->
+        <div class="mb-4 mt-2">
+            <img src="~/lib/images/formalpic.jpg" 
+                 alt="Jaell Andrei Cabardo" 
+                 class="img-fluid rounded-circle shadow border border-4 border-white" 
+                 style="width: 200px; height: 200px; object-fit: cover;" />
+        </div>
+
+        <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill mb-3">Welcome to my Portfolio!</span>
+        <h1 class="display-3 fw-bold text-dark mb-3">Hello, I'm Jaell Andrei</h1>
+        <p class="lead text-muted mb-4 mx-auto" style="max-width: 650px;">
+            Hi! My Name is Jaell Andrei O. Cabardo, 3rd year BSIT student at Lyceum of Alabang. Im interested in diverse areas including Database, Web Development, Cybersecurity, and Cobot Integration. I emphasizes the importance of flexibility in the IT field, believing it significantly aids in addressing real-world problems.
+        </p>
+        <div class="d-flex flex-wrap gap-3 justify-content-center">
+            <a href="#projects" class="btn btn-primary btn-lg px-4 shadow">View My Work</a>
+            <a href="#contact" class="btn btn-outline-secondary btn-lg px-4">Contact Info</a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- ABOUT ME SECTION -->
+
+<section id="about">
+
+    <div class="container">
+
+        <h2 class="display-5 fw-bold mb-4 text-dark text-center text-md-start">About Me</h2>
+
+        <div class="row g-4">
+
+            <div class="col-lg-6">
+
+                <h4 class="text-primary mb-3">Biography & Career Goals</h4>
+
+                <p class="text-muted">
+
+                    I am Jaell Andrei Cabardo, a 3rd-year BSIT student actively building a diverse foundation in modern technology and software development. 
+
+                    developed a strong passion for web applications, database systems, cybersecurity, and cobot programming.
+
+                </p>
+
+                <p class="text-muted">
+
+                    My studies focus on understanding model-view-controller architectures, front-end responsive grid systems, and secure backend execution logic.
+
+                    I love translating business needs and raw mockups into polished, deployable software,
+
+                    and my ultimate goal is to leverage my multi-disciplinary IT background to build secure, full-scale, and highly responsive web portals and services.
+
+                </p>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="card border-0 shadow-sm p-4 bg-white">
+
+                    <h5 class="fw-bold mb-3"><i class="bi bi-mortarboard me-2 text-primary"></i> Education</h5>
+
+                    <p class="mb-1 fw-semibold text-dark">Bachelor of Science in Information Technology</p>
+
+                    <p class="text-muted small">Lyceum of alabang • Currently Taking</p>
+
+                    
+
+                    <hr class="my-3">
+                              
+    
+    <h5 class="fw-bold mb-3"><i class="bi bi-heart me-2 text-primary"></i> Personal Interests</h5>
+    <div class="d-flex flex-wrap gap-2">
+        <!-- Each badge is now a clickable link that opens Google search in a new tab -->
+        <a href="https://www.google.com/search?q=C%23+Programming" target="_blank" class="badge bg-light text-dark p-2 border text-decoration-none">
+            C# Programming
+        </a>
+        <a href="https://www.google.com/search?q=Web+Application+Design" target="_blank" class="badge bg-light text-dark p-2 border text-decoration-none">
+            Web Application Design
+        </a>
+        <a href="https://www.google.com/search?q=UI%2FUX+Crafting" target="_blank" class="badge bg-light text-dark p-2 border text-decoration-none">
+            UI/UX Crafting
+        </a>
+        <a href="https://www.google.com/search?q=Python+Programming" target="_blank" class="badge bg-light text-dark p-2 border text-decoration-none">
+            Python Programming
+        </a>
+        <a href="https://www.google.com/search?q=Cobot+Integration" target="_blank" class="badge bg-light text-dark p-2 border text-decoration-none">
+            Cobot
+        </a>
+    </div>
 </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- SKILLS SECTION -->
+
+<section id="skills" class="bg-light-subtle">
+
+    <div class="container">
+
+        <h2 class="display-5 fw-bold mb-5 text-dark text-center">Technical Skills</h2>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+
+            
+
+            <!-- Category 1 -->
+
+            <div class="col">
+
+                <div class="card h-100 border-0 shadow-sm text-center p-3">
+
+                    <div class="card-body">
+
+                        <div class="text-primary mb-3"><i class="bi bi-file-earmark-code fs-1"></i></div>
+
+                        <h5 class="card-title fw-bold">Languages</h5>
+
+                        <p class="card-text text-muted small">C#, Python, Java, SQL, HTML, CSS, JavaScript</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Category 2 -->
+
+            <div class="col">
+
+                <div class="card h-100 border-0 shadow-sm text-center p-3">
+
+                    <div class="card-body">
+
+                        <div class="text-primary mb-3"><i class="bi bi-globe fs-1"></i></div>
+
+                        <h5 class="card-title fw-bold">Web Tech</h5>
+
+                        <p class="card-text text-muted small">ASP.NET Core MVC, Bootstrap 5, RESTful APIs</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Category 3 -->
+
+            <div class="col">
+
+                <div class="card h-100 border-0 shadow-sm text-center p-3">
+
+                    <div class="card-body">
+
+                        <div class="text-primary mb-3"><i class="bi bi-database fs-1"></i></div>
+
+                        <h5 class="card-title fw-bold">Databases</h5>
+
+                        <p class="card-text text-muted small">MS SQL Server, Entity Framework Core</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Category 4 -->
+
+            <div class="col">
+
+                <div class="card h-100 border-0 shadow-sm text-center p-3">
+
+                    <div class="card-body">
+
+                        <div class="text-primary mb-3"><i class="bi bi-tools fs-1"></i></div>
+
+                        <h5 class="card-title fw-bold">Dev Tools</h5>
+
+                        <p class="card-text text-muted small">Visual Studio, Git, GitHub, Pycharm, Dart Studio, XG5000, XPBuilder</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- PROJECTS SECTION -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <h2 class="display-5 fw-bold mb-5 text-dark text-center">Featured Projects</h2>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+            
+
+            <!-- Project 1 -->
+
+            <div class="col">
+
+                <div class="card h-100 border-0 shadow-sm overflow-hidden">
+
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600" class="card-img-top" alt="Project 1" style="height: 200px; object-fit: cover;">
+
+                    <div class="card-body d-flex flex-column">
+
+                        <h5 class="card-title fw-bold text-dark">E-Commerce Management Dashboard(RANDOM PROJECT ONLY)</h5>
+
+                        <p class="card-text text-muted flex-grow-1">A high-performance backend dashboard interface to control business metrics, handle inventory updates, and visualize sales reports.(THIS IS A RANDOM BECAUSE I DONT HAVE BIG PROJECT YET)</p>
+
+                        <div class="mb-3">
+
+                            <span class="badge bg-dark-subtle text-dark">ASP.NET MVC</span>
+
+                            <span class="badge bg-dark-subtle text-dark">EF Core</span>
+
+                            <span class="badge bg-dark-subtle text-dark">SQL Server</span>
+
+                        </div>
+
+                        <a href="#" class="btn btn-outline-primary mt-auto">View Details</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Project 2 -->
+
+            <div class="col">
+
+                <div class="card h-100 border-0 shadow-sm overflow-hidden">
+
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600" class="card-img-top" alt="Project 2" style="height: 200px; object-fit: cover;">
+
+                    <div class="card-body d-flex flex-column">
+
+                        <h5 class="card-title fw-bold text-dark">Real-Time Chat Application(RANDOM PROJECT ONLY)</h5>
+
+                        <p class="card-text text-muted flex-grow-1">A real-time chatting environment supporting user rooms, status checks, and instant messaging updates through WebSockets.(THIS IS A RANDOM BECAUSE I DONT HAVE BIG PROJECT YET)</p>
+
+                        <div class="mb-3">
+
+                            <span class="badge bg-dark-subtle text-dark">SignalR</span>
+
+                            <span class="badge bg-dark-subtle text-dark">JavaScript</span>
+
+                            <span class="badge bg-dark-subtle text-dark">CSS Grid</span>
+
+                        </div>
+
+                        <a href="#" class="btn btn-outline-primary mt-auto">View Details</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Project 3 -->
+
+            <div class="col">
+
+                <div class="card h-100 border-0 shadow-sm overflow-hidden">
+
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=600" class="card-img-top" alt="Project 3" style="height: 200px; object-fit: cover;">
+
+                    <div class="card-body d-flex flex-column">
+
+                        <h5 class="card-title fw-bold text-dark">Task Management System(RANDOM PROJECT ONLY)</h5>
+
+                        <p class="card-text text-muted flex-grow-1">A personal kanban board web-app that keeps users organized and tracks tasks from creation to completion.(THIS IS A RANDOM BECAUSE I DONT HAVE BIG PROJECT YET)</p>
+
+                        <div class="mb-3">
+
+                            <span class="badge bg-dark-subtle text-dark">C#</span>
+
+                            <span class="badge bg-dark-subtle text-dark">Bootstrap 5</span>
+
+                            <span class="badge bg-dark-subtle text-dark">Entity Framework</span>
+
+                        </div>
+
+                        <a href="#" class="btn btn-outline-primary mt-auto">View Details</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- CONTACT SECTION -->
+
+<section id="contact" class="bg-light-subtle">
+
+    <div class="container">
+
+        <h2 class="display-5 fw-bold mb-5 text-dark text-center">Contact Me</h2>
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8">
+
+                <div class="card border-0 shadow p-4 text-center">
+
+                    <h4 class="mb-4">Let's build something together!</h4>
+
+                    
+
+                    <div class="row g-3 mb-4">
+
+                        <div class="col-sm-6">
+
+                            <div class="p-3 border rounded bg-white">
+
+                                <i class="bi bi-envelope text-primary fs-3"></i>
+
+                                <h6 class="mt-2 fw-bold">Email</h6>
+
+                                <p class="text-muted mb-0">jaellandreic@gmail.com</p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm-6">
+
+                            <div class="p-3 border rounded bg-white">
+
+                                <i class="bi bi-phone text-primary fs-3"></i>
+
+                                <h6 class="mt-2 fw-bold">Mobile Number</h6>
+
+                                <p class="text-muted mb-0">+63 (993) 335-1307</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="d-flex justify-content-center gap-3 mb-4">
+
+                        <a href="https://github.com/CABARDOJAELLANDREI" target="_blank" class="btn btn-dark btn-lg rounded-circle">
+
+                            <i class="bi bi-github"></i>
+
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/jaell-cabardo-344276422/   " target="_blank" class="btn btn-primary btn-lg rounded-circle">
+
+                            <i class="bi bi-linkedin"></i>
+
+                        </a>
+
+                        <a href="https://www.facebook.com/jaell.andrei.cabardo.2024/" target="_blank" class="btn btn-info text-white btn-lg rounded-circle">
+
+                            <i class="bi bi-facebook"></i>
+
+                        </a>
+
+                    </div>
+
+
+
+                    <div>
+
+                        <!-- Download Resume Button (No functional execution required) -->
+
+                        <button class="btn btn-success btn-lg px-5 shadow">
+
+                            <i class="bi bi-download me-2"></i> Download Resume
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>  
+
