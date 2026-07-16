@@ -1,16 +1,3 @@
-To achieve this updated look, we need to make three adjustments:
-
-Revert the sidebar's background color back to the dark slate gray (#212529 / .bg-dark variant) as it was originally.
-
-Update the sidebar text styles to match the dark color theme.
-
-Add a circular profile picture right above the "Welcome to my Space" badge and main heading in your Index.cshtml home section.
-
-Here is the updated code for those files:
-
-1. Views/Shared/_Layout.cshtml
-This version reverts the sidebar's class styling to use a clean dark background (bg-dark) while maintaining the structure.
-
 HTML
 <!DOCTYPE html>
 <html lang="en">
@@ -28,11 +15,9 @@ HTML
 
 <div class="container-fluid">
     <div class="row">
-        <!-- Responsive Dark Sidebar Navigation -->
         <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse bg-dark">
             <div class="position-sticky pt-3 d-flex flex-column justify-content-between h-100">
                 <div>
-                    <!-- Profile Photo, Name & Title in Sidebar -->
                     <div class="text-center px-3 mb-4 text-white border-bottom border-secondary pb-3">
                         <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=200&auto=format&fit=crop" 
                              alt="Jaell Andrei Cabardo" 
@@ -43,7 +28,6 @@ HTML
                         <small class="text-muted d-block fs-7">Aspiring Software Developer</small>
                     </div>
                     
-                    <!-- Navigation Menu -->
                     <ul class="nav flex-column px-2">
                         <li class="nav-item mb-2">
                             <a class="nav-link text-white active" href="#home">
@@ -73,14 +57,12 @@ HTML
                     </ul>
                 </div>
                 
-                <!-- Sidebar Footer -->
                 <div class="p-3 text-muted text-center border-top border-secondary">
                     <small>© 2026 - Portfolio</small>
                 </div>
             </div>
         </nav>
 
-        <!-- Mobile Header Bar (Only visible on Mobile/Tablets) -->
         <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow d-md-none">
             <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#home">My Portfolio</a>
             <button class="navbar-toggler position-absolute d-md-none collapsed m-2" type="button" 
@@ -90,7 +72,6 @@ HTML
             </button>
         </header>
 
-        <!-- Main Content Area -->
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 main-content">
             <div class="container py-4">
                 @RenderBody()
@@ -125,7 +106,6 @@ body {
   color: #333;
 }
 
-/* Sidebar Custom Theme (Reverted to Dark) */
 .sidebar {
   position: fixed;
   top: 0;
@@ -146,7 +126,6 @@ body {
   }
 }
 
-/* Navigation Links Style Inside Dark Sidebar */
 .sidebar .nav-link {
   font-weight: 500;
   border-radius: 6px;
@@ -163,12 +142,10 @@ body {
   background-color: rgba(255, 255, 255, 0.15) !important;
 }
 
-/* Utility Helper for Smaller Text */
 .fs-7 {
   font-size: 0.85rem;
 }
 
-/* Portfolio Section Layouts */
 section {
   padding-top: 5rem;
   padding-bottom: 3rem;
