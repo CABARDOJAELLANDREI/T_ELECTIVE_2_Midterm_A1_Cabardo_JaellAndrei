@@ -1,0 +1,142 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h1 class="display-4 fw-bold">
+                About Me
+            </h1>
+
+            <p class="lead text-muted">
+                Learn more about me and my journey in Information Technology.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-7">
+
+                <div class="card shadow-sm border-0 h-100">
+
+                    <div class="card-body p-4">
+
+                        <h3 class="text-primary mb-3">
+                            <i class="bi bi-person-circle me-2"></i>
+                            Biography
+                        </h3>
+
+                        <p class="text-muted">
+                            @ViewData["Biography"]
+                        </p>
+
+                        <hr />
+
+                        <h3 class="text-primary mb-3">
+                            <i class="bi bi-bullseye me-2"></i>
+                            Career Goal
+                        </h3>
+
+                        <p class="text-muted">
+                            @ViewData["Goal"]
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-5">
+
+                <div class="card shadow-sm border-0">
+
+                    <div class="card-body p-4">
+
+                        <h4 class="fw-bold mb-3">
+                            <i class="bi bi-mortarboard-fill text-primary me-2"></i>
+                            Education
+                        </h4>
+
+                        <p class="text-muted">
+                            @ViewData["Education"]
+                        </p>
+
+                        <hr />
+
+                        <h4 class="fw-bold mb-3">
+                            <i class="bi bi-heart-fill text-danger me-2"></i>
+                            Personal Interests
+                        </h4>
+
+                        <div class="d-flex flex-wrap gap-2">
+
+                            <a href="https://www.google.com/search?q=C%23+Programming"
+                               target="_blank"
+                               class="badge bg-secondary text-decoration-none">
+                                C# Programming
+                            </a>
+
+
+                            <a href="https://www.google.com/search?q=ASP.NET+Core+MVC"
+                               target="_blank"
+                               class="badge bg-secondary text-decoration-none">
+                                ASP.NET Core MVC
+                            </a>
+
+
+                            <a href="https://www.google.com/search?q=Web+Development"
+                               target="_blank"
+                               class="badge bg-secondary text-decoration-none">
+                                Web Development
+                            </a>
+
+
+                            <a href="https://www.google.com/search?q=Cybersecurity"
+                               target="_blank"
+                               class="badge bg-secondary text-decoration-none">
+                                Cybersecurity
+                            </a>
+
+
+                            <a href="https://www.google.com/search?q=SQL+Server"
+                               target="_blank"
+                               class="badge bg-secondary text-decoration-none">
+                                SQL Server
+                            </a>
+
+
+                            <a href="https://www.google.com/search?q=Python+Programming"
+                               target="_blank"
+                               class="badge bg-secondary text-decoration-none">
+                                Python
+                            </a>
+
+                            <a href="https://www.google.com/search?q=Java+Programming"
+                               target="_blank"
+                               class="badge bg-secondary text-decoration-none">
+                                Java
+                            </a>
+
+                            <a href="https://www.google.com/search?q=CoBot+System+Integration+Programming"
+                               target="_blank"
+                               class="badge bg-secondary text-decoration-none">
+                                CoBot
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
